@@ -23,7 +23,7 @@ class SignUpdate extends PluginTask {
         parent::__construct($allSigns);
     }
 
-    public function onRun(int $currentTick) {
+    public function onRun($currentTick) {
         foreach($this->getAllSigns()->getServer()->getLevels() as $level) {
             foreach($level->getTiles() as $tile) {
                 if($tile instanceof Sign) {
